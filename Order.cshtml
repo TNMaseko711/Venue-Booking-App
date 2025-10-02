@@ -1,0 +1,93 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC Retail - New Order</title>
+    <link href="~/css/styles.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="container">
+        <h1>Place a New Order</h1>
+        <form id="orderForm">
+            <div class="form-group">
+                <label for="customerName">Customer Name:</label>
+                <input type="text" class="form-control" id="customerName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="customerEmail">Email:</label>
+                <input type="email" class="form-control" id="customerEmail" required>
+            </div>
+
+            <div class="form-group">
+                <label for="productSelection">Select Product:</label>
+                <select class="form-control" id="productSelection" onchange="updatePrice()" required>
+                    <option value="Product1" data-price="11999">Samsung Galaxy S23 - R11,999</option>
+                    <option value="Product2" data-price="174.99">Jacobs Coffee - R174.99</option>
+                    <option value="Product3" data-price="2299">Fitbit Charge 5 - R2,299</option>
+                    <option value="Product4" data-price="2999">IKEA Bekant Desk - R2,999</option>
+                    <option value="Product5" data-price="1499">NutriBullet Pro 900 - R1499</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="quantity">Quantity:</label>
+                <input type="number" class="form-control" id="quantity" min="1" value="1" onchange="updateTotal()" required>
+            </div>
+
+            <div class="form-group">
+                <label for="totalPrice">Total Price:</label>
+                <input type="text" class="form-control" id="totalPrice" readonly>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Place Order</button>
+        </form>
+    </div>
+
+    <script>
+        // Function to update price based on selected product and quantity
+        function updatePrice() {
+            const productSelect = document.getElementById('productSelection');
+            const quantity = document.getElementById('quantity').value;
+            const selectedOption = productSelect.options[productSelect.selectedIndex];
+            const price = selectedOption.getAttribute('data-price');
+            document.getElementById('totalPrice').value = 'R' + (price * quantity).toFixed(2);
+        }
+
+        function updateTotal() {
+            updatePrice();
+        }
+
+        // Initial price update on page load
+        window.onload = function () {
+            updatePrice();
+        };
+
+        // Handle form submission
+        document.getElementById('orderForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            // Here, you can add the logic to save the order information
+            alert('Order placed successfully!');
+        });
+    </script>
+</body>
+</html>
+
+<!-- References Section -->
+@*         <section class="mt-4">
+            <h2>References</h2>
+            <ul>
+                <li>Blank, S.G. and Dorf, B. (2020). <i>The startup owner’s manual: The step-by-step guide for building a great company</i>. Vol. 1. Hoboken, New Jersey: John Wiley & Sons, Inc. Available at: <a href="https://www.google.co.za/books/edition/The_Startup_Owner_s_Manual/eSrfDwAAQBAJ?hl=en&gbpv=1&printsec=frontcover">https://www.google.co.za/books/edition/The_Startup_Owner_s_Manual/eSrfDwAAQBAJ?hl=en&gbpv=1&printsec=frontcover</a> [Accessed 23 Mar. 2024].</li>
+                <li>Date, C.J. (1995). <i>An introduction to database systems</i>. Vol. 1. Reading, Mass. Addison-Wesley. Available at: <a href="https://lc.fie.umich.mx/~rodrigo/BD/An%20Introduction%20to%20Database%20Systems%208e%20By%20C%20J%20Date.pdf">https://lc.fie.umich.mx/~rodrigo/BD/An%20Introduction%20to%20Database%20Systems%208e%20By%20C%20J%20Date.pdf</a> [Accessed 22 Mar. 2024].</li>
+                <li>Çapak, F. (2023). <i>E-Commerce Unlocked: A Step-by-Step Guide to Launching Your Online Store</i>. Fatih Çapak.</li>
+                <li>Gilbert, J. (2018). <i>JavaScript cloud native development cookbook: Deliver serverless cloud-native solutions on AWS, Azure, and GCP</i>. Birmingham: Packt Publishing Ltd. Available at: <a href="https://www.google.co.za/books/edition/JavaScript_Cloud_Native_Development_Cook/79FwDwAAQBAJ?hl=en&gbpv=1&printsec=frontcover">https://www.google.co.za/books/edition/JavaScript_Cloud_Native_Development_Cook/79FwDwAAQBAJ?hl=en&gbpv=1&printsec=frontcover</a> [Accessed 25 Mar. 2024].</li>
+                <li>Krug, S. (2013). <i>Don’t Make Me Think, Revisited: A Common Sense Approach to Web Usability</i>. 3rd ed. Berkeley, Calif.: New Riders. Available at: <a href="https://eng317hannah.wordpress.ncsu.edu/files/2020/01/Krug_Steve_Dont_make_me_think_revisited___a_cz-lib.org_.pdf">https://eng317hannah.wordpress.ncsu.edu/files/2020/01/Krug_Steve_Dont_make_me_think_revisited___a_cz-lib.org_.pdf</a> [Accessed 14 Mar. 2024].</li>
+                <li>Management Association, Information Resources (2012). <i>Grid and Cloud Computing: Concepts, Methodologies, Tools and Applications</i>. IGI Global. Available at: <a href="https://www.google.co.za/books/edition/Grid_and_Cloud_Computing_Concepts_Method/ulKr4CXuQW4C?hl=en&gbpv=1&printsec=frontcover">https://www.google.co.za/books/edition/Grid_and_Cloud_Computing_Concepts_Method/ulKr4CXuQW4C?hl=en&gbpv=1&printsec=frontcover</a> [Accessed 22 Mar. 2024].</li>
+                <li>Nielsen, J. and Loranger, H. (2006). <i>Prioritizing Web Usability</i>. Pearson Education. Available at: <a href="https://www.google.co.za/books/edition/Prioritizing_Web_Usability/YQsje6Ecl4UC?hl=en&gbpv=1&printsec=frontcover">https://www.google.co.za/books/edition/Prioritizing_Web_Usability/YQsje6Ecl4UC?hl=en&gbpv=1&printsec=frontcover</a> [Accessed 26 Mar. 2024].</li>
+            </ul>
+        </section *@

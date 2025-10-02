@@ -1,0 +1,121 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC Retail - Home</title>
+    <link href="~/css/styles.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="container">
+        <!-- Welcome Section -->
+        <div class="jumbotron text-center mt-4">
+            <h1>Welcome to ABC Retail</h1>
+            <p>Your one-stop shop for quality products and exceptional service.</p>
+            <a href="products.html" class="btn btn-primary">Shop Now</a>
+        </div>
+
+        <!-- Featured Products Section -->
+        <section>
+            <h2>Featured Products</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://images.samsung.com/is/image/samsung/assets/za/smartphones/galaxy-s23/galaxy-s23-highlights-kv.jpg?$ORIGIN_JPG$" class="card-img-top" alt="Product 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Samsung Galaxy S23</h5>
+                            <p class="card-text">R11,999</p>
+                            <a href="#" class="btn btn-primary">View Product</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://parempire.com/cdn/shop/articles/jacobs_1512x.jpg?v=1697721118" class="card-img-top" alt="Product 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Jacobs Coffee</h5>
+                            <p class="card-text">R174.99</p>
+                            <a href="#" class="btn btn-primary">View Product</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaPrpQ2-TUPKH3aGXBLPmzkNfVgbfTlPl8Cg&s" class="card-img-top" alt="Product 3">
+                        <div class="card-body">
+                            <h5 class="card-title">NutriBullet Pro 900</h5>
+                            <p class="card-text">R1,499</p>
+                            <a href="#" class="btn btn-primary">View Product</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Customer Testimonials Section -->
+        <section class="mt-4">
+            <h2>What Our Customers Are Saying</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <blockquote class="blockquote">
+                        <p class="mb-0">"ABC Retail offers the best products at unbeatable prices. I'm a loyal customer for life!"</p>
+                        <footer class="blockquote-footer">Sarah Johnson</footer>
+                    </blockquote>
+                </div>
+                <div class="col-md-4">
+                    <blockquote class="blockquote">
+                        <p class="mb-0">"Excellent customer service and fast shipping. Highly recommend ABC Retail."</p>
+                        <footer class="blockquote-footer">Michael Williams</footer>
+                    </blockquote>
+                </div>
+                <div class="col-md-4">
+                    <blockquote class="blockquote">
+                        <p class="mb-0">"The quality of the products is top-notch. ABC Retail never disappoints!"</p>
+                        <footer class="blockquote-footer">Emily Brown</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Links Section -->
+        <section class="mt-4">
+            <h2>Quick Links</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>New Arrivals</h4>
+                    <p>Check out the latest products in our store.</p>
+                    <a href="products.html" class="btn btn-secondary">Explore</a>
+                </div>
+                <div class="col-md-4">
+                    <h4>Best Sellers</h4>
+                    <p>Discover our most popular products.</p>
+                    <a href="products.html" class="btn btn-secondary">Shop Now</a>
+                </div>
+                <div class="col-md-4">
+                    <h4>Customer Support</h4>
+                    <p>Need help? Contact our support team for assistance.</p>
+                    <a href="contact.html" class="btn btn-secondary">Get Support</a>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
+
+<!-- References Section -->
+@*         <section class="mt-4">
+            <h2>References</h2>
+            <ul>
+                <li>Blank, S.G. and Dorf, B. (2020). <i>The startup owner’s manual: The step-by-step guide for building a great company</i>. Vol. 1. Hoboken, New Jersey: John Wiley & Sons, Inc. Available at: <a href="https://www.google.co.za/books/edition/The_Startup_Owner_s_Manual/eSrfDwAAQBAJ?hl=en&gbpv=1&printsec=frontcover">https://www.google.co.za/books/edition/The_Startup_Owner_s_Manual/eSrfDwAAQBAJ?hl=en&gbpv=1&printsec=frontcover</a> [Accessed 23 Mar. 2024].</li>
+                <li>Date, C.J. (1995). <i>An introduction to database systems</i>. Vol. 1. Reading, Mass. Addison-Wesley. Available at: <a href="https://lc.fie.umich.mx/~rodrigo/BD/An%20Introduction%20to%20Database%20Systems%208e%20By%20C%20J%20Date.pdf">https://lc.fie.umich.mx/~rodrigo/BD/An%20Introduction%20to%20Database%20Systems%208e%20By%20C%20J%20Date.pdf</a> [Accessed 22 Mar. 2024].</li>
+                <li>Çapak, F. (2023). <i>E-Commerce Unlocked: A Step-by-Step Guide to Launching Your Online Store</i>. Fatih Çapak.</li>
+                <li>Gilbert, J. (2018). <i>JavaScript cloud native development cookbook: Deliver serverless cloud-native solutions on AWS, Azure, and GCP</i>. Birmingham: Packt Publishing Ltd. Available at: <a href="https://www.google.co.za/books/edition/JavaScript_Cloud_Native_Development_Cook/79FwDwAAQBAJ?hl=en&gbpv=1&printsec=frontcover">https://www.google.co.za/books/edition/JavaScript_Cloud_Native_Development_Cook/79FwDwAAQBAJ?hl=en&gbpv=1&printsec=frontcover</a> [Accessed 25 Mar. 2024].</li>
+                <li>Krug, S. (2013). <i>Don’t Make Me Think, Revisited: A Common Sense Approach to Web Usability</i>. 3rd ed. Berkeley, Calif.: New Riders. Available at: <a href="https://eng317hannah.wordpress.ncsu.edu/files/2020/01/Krug_Steve_Dont_make_me_think_revisited___a_cz-lib.org_.pdf">https://eng317hannah.wordpress.ncsu.edu/files/2020/01/Krug_Steve_Dont_make_me_think_revisited___a_cz-lib.org_.pdf</a> [Accessed 14 Mar. 2024].</li>
+                <li>Management Association, Information Resources (2012). <i>Grid and Cloud Computing: Concepts, Methodologies, Tools and Applications</i>. IGI Global. Available at: <a href="https://www.google.co.za/books/edition/Grid_and_Cloud_Computing_Concepts_Method/ulKr4CXuQW4C?hl=en&gbpv=1&printsec=frontcover">https://www.google.co.za/books/edition/Grid_and_Cloud_Computing_Concepts_Method/ulKr4CXuQW4C?hl=en&gbpv=1&printsec=frontcover</a> [Accessed 22 Mar. 2024].</li>
+                <li>Nielsen, J. and Loranger, H. (2006). <i>Prioritizing Web Usability</i>. Pearson Education. Available at: <a href="https://www.google.co.za/books/edition/Prioritizing_Web_Usability/YQsje6Ecl4UC?hl=en&gbpv=1&printsec=frontcover">https://www.google.co.za/books/edition/Prioritizing_Web_Usability/YQsje6Ecl4UC?hl=en&gbpv=1&printsec=frontcover</a> [Accessed 26 Mar. 2024].</li>
+            </ul>
+        </section *@
